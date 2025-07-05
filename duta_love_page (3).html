@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Dutaku Sayang</title>
+  <style>
+    body {
+      background-color: #ffe6e6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .message {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      font-size: 1.6em;
+      line-height: 1.8em;
+    }
+
+    .emoji {
+      font-size: 2em;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <audio id="bg-audio" autoplay loop>
+    <source src="https://dl.dropboxusercontent.com/scl/fi/q5rsaycv1jhf0hj0lrkmq/Happiness-Rex-Orange-County.mp3?rlkey=5pybw2a8z6flkbbjv5okskxn6&dl=0" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Untuk memulai audio secara interaktif karena beberapa browser butuh klik dulu
+    document.addEventListener('click', () => {
+      const audio = document.getElementById('bg-audio');
+      if (audio.paused) {
+        audio.play().catch(() => {});
+      }
+    });
+  </script>
+
+  <div class="message">
+    <div class="emoji">
+      ❤️❤️❤️😘😘😘❤️❤️❤️😘😘😘❤️❤️❤️<br>
+    </div>
+    <p>
+      halo sayangkuuu cintakuu dutakuuu<br>
+      i love you i love you i love you ❤️
+    </p>
+    <div class="emoji">
+      ❤️❤️❤️😘😘😘❤️❤️❤️😘😘😘❤️❤️❤️<br>
+    </div>
+  </div>
+</body>
+</html>
